@@ -1,0 +1,106 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package ejerciciopractico3;
+
+/**
+ *
+ * @author Aulas Heredia
+ */
+public class Bodeguero {
+    //En esta parte declaro las variables que voy a utilizar para el trabajo.
+    public int codigo_producto;
+    public String nombre_producto = " ";
+    public String nombre_empleado = " ";
+    public int cedula_empleado;
+    public int cantidad_producto;
+    public int precio_producto;
+    public Tipo_producto tipo_producto; 
+    public int precio_bruto;
+    public int ganacia_esperada;
+
+    public Bodeguero(int codigo_producto, int cedula_empleado, int cantidad_producto, int precio_producto, Tipo_producto tipo_producto, int precio_bruto, int ganacia_esperada) {
+        this.codigo_producto = codigo_producto;
+        this.cedula_empleado = cedula_empleado;
+        this.cantidad_producto = cantidad_producto;
+        this.precio_producto = precio_producto;
+        this.tipo_producto = tipo_producto;
+        this.precio_bruto = precio_bruto;
+        this.ganacia_esperada = ganacia_esperada;
+    }
+
+    public int getCodigo_producto() {
+        return codigo_producto;
+    }
+
+    public void setCodigo_producto(int codigo_producto) {
+        this.codigo_producto = codigo_producto;
+    }
+
+    public String getNombre_producto() {
+        return nombre_producto;
+    }
+
+    public void setNombre_producto(String nombre_producto) {
+        this.nombre_producto = nombre_producto;
+    }
+
+    public String getNombre_empleado() {
+        return nombre_empleado;
+    }
+
+    public void setNombre_empleado(String nombre_empleado) {
+        this.nombre_empleado = nombre_empleado;
+    }
+
+    public int getCedula_empleado() {
+        return cedula_empleado;
+    }
+
+    public void setCedula_empleado(int cedula_empleado) {
+        this.cedula_empleado = cedula_empleado;
+    }
+
+    public int getCantidad_producto() {
+        return cantidad_producto;
+    }
+
+    public void setCantidad_producto(int cantidad_producto) {
+        this.cantidad_producto = cantidad_producto;
+    }
+
+    public int getPrecio_producto() {
+        return precio_producto;
+    }
+
+    public void setPrecio_producto(int precio_producto) {
+        this.precio_producto = precio_producto;
+    }
+
+    public Tipo_producto getTipo_producto() {
+        return tipo_producto;
+    }
+
+    public void setTipo_producto(Tipo_producto tipo_producto) {
+        this.tipo_producto = tipo_producto;
+    }
+
+    public int getPrecio_bruto() {
+        return precio_bruto;
+    }
+
+    public void setPrecio_bruto(int precio_bruto) {
+        this.precio_bruto = precio_bruto;
+    }
+
+    public int getGanacia_esperada() {
+        return ganacia_esperada;
+    }
+
+    public void setGanacia_esperada(int ganacia_esperada) {
+        this.ganacia_esperada = ganacia_esperada;
+    }
+    
+
+}
