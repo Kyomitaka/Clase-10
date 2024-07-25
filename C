@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class BodegueroApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicitar datos del bodeguero al usuario
+        System.out.print("Ingrese el código del producto: ");
+        int codigoProducto = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Ingrese el nombre del empleado: ");
+        String nombreEmpleado = scanner.nextLine();
+
+        System.out.print("Ingrese la cédula del empleado: ");
+        int cedulaEmpleado = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Ingrese la cantidad del producto: ");
+        int cantidadProducto = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Ingrese el precio del producto: ");
+        int precioProducto = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Ingrese el tipo de producto (1 para A, 2 para B, etc.): ");
+        int tipoProductoInt = Integer.parseInt(scanner.nextLine());
+        Tipo_producto tipoProducto = Tipo_producto.values()[tipoProductoInt - 1]; // asumiendo que enum está correctamente indexado
+
+        System.out.print("Ingrese el precio bruto del producto: ");
+        int precioBruto = Integer.parseInt(scanner.nextLine());
+
+        System.out.print("Ingrese la ganancia esperada: ");
+        int gananciaEsperada = Integer.parseInt(scanner.nextLine());
+
+        // Crear la instancia del Bodeguero
+        Bodeguero bodeguero = new Bodeguero(codigoProducto, cedulaEmpleado, cantidadProducto, precioProducto, tipoProducto, precioBruto, gananciaEsperada);
+
+        // Mostrar los datos ingresados para verificación
+        System.out.println("\nDatos del Bodeguero creado:");
+        System.out.println("Código del Producto: " + bodeguero.getCodigo_producto());
+        System.out.println("Nombre del Empleado: " + nombreEmpleado); // suponiendo que añades un setter
+        System.out.println("Cédula del Empleado: " + bodeguero.getCedula_empleado());
+        System.out.println("Cantidad del Producto: " + bodeguero.getCantidad_producto());
+        System.out.println("Precio del Producto: " + bodeguero.getPrecio_producto());
+        System.out.println("Tipo del Producto: " + bodeguero.getTipo_producto());
+        System.out.println("Precio Bruto: " + bodeguero.getPrecio_bruto());
+        System.out.println("Ganancia Esperada: " + bodeguero.getGanacia_esperada());
+
+        scanner.close();
+    }
+}
